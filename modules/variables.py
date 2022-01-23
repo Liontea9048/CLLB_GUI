@@ -1,3 +1,23 @@
+# import module and packages
+from tkinter import messagebox
+import tkinter.ttk as ttk
+from tkinter import *
+import tkinter.font as ft
+import os
+from datetime import date
+from datetime import datetime
+import natsort
+import subprocess
+import argparse
+from time import sleep
+
+# args
+parser = argparse.ArgumentParser(description="Please Type Names of Setup.txt, Set.exe, and Run.exe")
+parser.add_argument("--setup", required=False, default="./setup.txt", help="Type the Setup.txt files's path and name, e.g. ./setup.txt")
+parser.add_argument("--set", required=False, default="./set_NKFADC500_1CH.exe", help="Type the Set.exe files's path and name, e.g. ./set.exe")
+parser.add_argument("--run", required=False, default="./run_NKFADC500_1CH.exe", help="Type the Run.exe files's path and name, e.g. ./run.exe")
+args = parser.parse_args()
+print(args.setup)
 # ------------------------ Global Variables
 varInputXpos = 270;
 unitsXpos = 375;
@@ -7,7 +27,15 @@ btnFramePadY = 10;
 btnRelX = 0.5;
 btnRelY = 0.05;
 labelPosX = 10;
-
+isAllValidVar = []
+VariableData = []
+Operatingbtns=[]
+OperatingEntries=[]
+OperatingComboBoxes=[]
+OperatingClassess=[]
+nameSetup=0;
+nameSetExec=0;
+nameRunExec=0;
 
 # Read default var
 numOfVar = 12; defaultVar = []; defaultVarIndex = 0
@@ -15,6 +43,8 @@ f = open("./Setup.txt", "r");
 for i in range(numOfVar):
     var = f.readline().split()
     defaultVar.append(var[0])
+    isAllValidVar.append(1)
+    VariableData.append(None)
 f.close()
 
 # ------------------------ Frame, Varialbes ------------------------

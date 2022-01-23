@@ -1,26 +1,12 @@
-86400
+7000
 0.0
-32
+64
 0
 3500
 500
 50
 0
 2000
-1
+0
 500
 0.05
-------------------------------------------
-1. acquisition time in ns, upto 8 * 2^40 ns
-2. high voltage
-3. recording length: 1=128ns, 2=256ns, 3=512ns, 8=1us, 16=2us, 32=4us, 64=8us
-4. pedestal trigger interval in ms, 0 for disable
-5. ADC offset value (0~4095)
-6. ADC waveform delay from trigger point (0 ~ 8,000)
-7. discrimination threshold, 1 ~ 4095
-8. input pulse polarity, 0 = negative, 1 = positive
-9. peak sum width in ns (8 ~ 8000 ns)
-10. ADC mode, 0 = raw, 1 = filtered
-11. peak to tail start delay, 0 ~ 8000 ns
-12. tail/body ratio threshold
-

@@ -1,9 +1,13 @@
 # ------------------------ Global Variables
 varInputXpos = 270;
-unitsXpos = 370;
+unitsXpos = 375;
 wrapLength = 250;
 btnFramePadX = 470;
 btnFramePadY = 10;
+btnRelX = 0.5;
+btnRelY = 0.05;
+labelPosX = 10;
+
 
 # Read default var
 numOfVar = 12; defaultVar = []; defaultVarIndex = 0
@@ -28,4 +32,9 @@ def updateYposAndIndex(degree=30):
     pos_y += degree; 
     defaultVarIndex +=1;
     return pos_y, defaultVarIndex
+
+def updateBtnPosition():
+    global btnRelY;
+    btnRelY += 0.15
+    return btnRelY;
     

@@ -63,17 +63,17 @@ if __name__ == "__main__":
 
     # 10. ADC mode, 0 = raw, 1 = filtered
     pos_y, defaultVarIndex = updateYposAndIndex()
-    mLabel(frame_var, "ADC Mode", expYPos=pos_y, unitsText="ns", unitsYPos=pos_y)
+    mLabel(frame_var, "ADC Mode", expYPos=pos_y, unitsYPos=pos_y)
     AM_cmbox = mCombobox(frame_var, defaultVarIndex, yPos=pos_y, flags="AM")
 
     # 11. Peak to Tail Start Delay, 0 ~ 8000 ns
     pos_y, defaultVarIndex = updateYposAndIndex()
-    mLabel(frame_var, "Peak to Tail Start Delay,\nRange: 0 - 8000", expYPos=pos_y, unitsText="ns", unitsYPos=pos_y+5)
+    mLabel(frame_var, "Peak to Tail Start Delay,\nRange: 0 - 8000", expYPos=pos_y, unitsYPos=pos_y+5)
     PTSD_entry = mEntry(frame_var, defaultVarIndex, yPos=pos_y, twoLines=1, maxVal=8000)
 
     # 12. Tail/Body Ratio Threshold
     pos_y, defaultVarIndex = updateYposAndIndex(degree=40)
-    mLabel(frame_var, "Tail/Body Ratio Threshold", expYPos=pos_y, unitsText="ns", unitsYPos=pos_y)
+    mLabel(frame_var, "Tail/Body Ratio Threshold", expYPos=pos_y, unitsYPos=pos_y)
     TBRT_entry = mEntry(frame_var, defaultVarIndex, yPos=pos_y)
 
     # ------------------------ Set and Run Frame ------------------------ #

@@ -10,9 +10,10 @@ import natsort
 import subprocess
 import argparse
 from time import sleep
+from collections import OrderedDict
 
 # args
-parser = argparse.ArgumentParser(description="Please Type Names of Setup.txt, Set.exe, and Run.exe")
+parser = argparse.ArgumentParser(description="Please Type Names of setup.txt, Set.exe, and Run.exe")
 parser.add_argument("--setup", required=False, default="./setup.txt", help="Type the Setup.txt files's path and name, e.g. ./setup.txt")
 parser.add_argument("--set", required=False, default="./set_NKFADC500_1CH.exe", help="Type the Set.exe files's path and name, e.g. ./set.exe")
 parser.add_argument("--run", required=False, default="./run_NKFADC500_1CH.exe", help="Type the Run.exe files's path and name, e.g. ./run.exe")
@@ -29,17 +30,17 @@ btnRelY = 0.05;
 labelPosX = 10;
 isAllValidVar = []
 VariableData = []
-Operatingbtns=[]
-OperatingEntries=[]
-OperatingComboBoxes=[]
-OperatingClassess=[]
+Operatingbtns=OrderedDict()
+OperatingEntries=OrderedDict()
+OperatingComboBoxes=OrderedDict()
+OperatingClassess=OrderedDict()
 nameSetup=0;
 nameSetExec=0;
 nameRunExec=0;
 
 # Read default var
-numOfVar = 12; defaultVar = []; defaultVarIndex = 0
-f = open("./Setup.txt", "r");
+numOfVar = 15; defaultVar = []; defaultVarIndex = 0
+f = open("./setup.txt", "r");
 for i in range(numOfVar):
     var = f.readline().split()
     defaultVar.append(var[0])

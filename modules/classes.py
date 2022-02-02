@@ -1,6 +1,5 @@
 from modules.variables import *
 
-
 class MLabel(Label):
     
     def __init__(self, masterFrame, expText="Type Explanation", expXPos=labelPosX, \
@@ -213,7 +212,6 @@ class MButton(Button):
             
         def execRunExe():
             os.system(f"{args.run} {VariableData[-3]} {VariableData[-2]} {VariableData[-1]}")
-            copy_inputs()
             Operatingbtns["ApplyHistory"].config(state="normal")
             OperatingComboBoxes["import"].config(values=getImportInputs())
             OperatingComboBoxes["import"].current(0)

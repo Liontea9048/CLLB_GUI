@@ -7,7 +7,6 @@ import os
 from datetime import date
 from datetime import datetime
 import natsort
-import subprocess
 import argparse
 from time import sleep
 from collections import OrderedDict

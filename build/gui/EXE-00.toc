@@ -1,5 +1,5 @@
 ('/home/liontea/cllb_gui/dist/gui',
- True,
+ False,
  False,
  False,
  None,
@@ -921,7 +921,7 @@
  [],
  False,
  False,
- 1643821091,
+ 1644815239,
  [('run',
    '/opt/conda/envs/cllb/lib/python3.9/site-packages/PyInstaller/bootloader/Linux-64bit/run',
    'EXECUTABLE')])

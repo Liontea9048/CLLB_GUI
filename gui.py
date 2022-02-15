@@ -7,6 +7,7 @@ if __name__ == "__main__":
     root.geometry("730x550-800+100") # left upper in Mac
     root.resizable(False, False)
 
+    
     # ------------------------ Create Labels, Set Variable Guide ------------------------ #
     ## intro
     lb_intro = Label(root, text="아래 변수들의 값을 설정하여 주십시오")

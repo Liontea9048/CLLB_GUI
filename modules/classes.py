@@ -1,5 +1,6 @@
 from modules.variables import *
 
+
 class MLabel(Label):
     
     def __init__(self, masterFrame, expText="Type Explanation", expXPos=labelPosX, \
@@ -14,7 +15,7 @@ class MEntry(Entry):
     
     def __init__(self, masterFrame, initIndex=0, xPos=varInputXpos, yPos=30, twoLines=0, minVal=0, maxVal=1e+9, name="none"):
         # Set the basic settings, set self to Entry, and set base variables
-        self = Entry(masterFrame, width=10, relief="solid", bd=2, justify="right");
+        self = Entry(masterFrame, width=10, relief="solid", bd=2, justify="right",fg="black");
         # OperatingEntries.append(self); OperatingClassess.append(self)
         OperatingEntries[name] = self; OperatingClassess[name] = self
         self.name = name
@@ -45,7 +46,7 @@ class MEntry(Entry):
                 MEntry.setIsAllValidVar(self, 0)
                 
             else:
-                self.config(fg="white")
+                self.config(fg="black")
                 MEntry.setIsAllValidVar(self, 1)
                 
         if self.maxVal:
@@ -97,14 +98,14 @@ class MEntry(Entry):
         if self.name != "IP":    
             if self.maxVal:
                 if float(self.minVal) <= float(self.initVar) <= float(self.maxVal):
-                    self.config(fg="white")
+                    self.config(fg="black")
                 else:
                     self.config(fg="red")
                     self.validVar = 0;
                     isAllValidVar[defaultVar.index(self.initVar)] = 0;
             else:
                 if float(self.minVal) <= float(self.initVar):
-                    self.config(fg="white")
+                    self.config(fg="black")
                 else:
                     self.config(fg="red")
                     self.validVar = 0;

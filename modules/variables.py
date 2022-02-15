@@ -1,5 +1,6 @@
 # import module and packages
 from tkinter import messagebox
+import tkinter
 import tkinter.ttk as ttk
 from tkinter import *
 import tkinter.font as ft

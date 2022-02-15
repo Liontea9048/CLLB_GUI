@@ -114,7 +114,7 @@ class MEntry(Entry):
 class MCombobox(ttk.Combobox):
     
     def __init__(self, masterFrame, initIndex=0, xPos=varInputXpos, yPos=10, flags="RLO"):
-        self = ttk.Combobox(masterFrame, width = 8, height = 7,\
+        self = ttk.Combobox(masterFrame, width = 9, height = 7,\
                 state="readonly", justify="right");
         # OperatingComboBoxes.append(self); OperatingClassess.append(self)
         OperatingComboBoxes[flags] = self; OperatingClassess[flags] = self;
@@ -173,7 +173,7 @@ class MCombobox(ttk.Combobox):
 class MButton(Button):
 
     def __init__(self, masterFrame, btnText="Type Text", RelX=btnRelX, RelY=btnRelY, whatRun="modify"):
-        boldFont = ft.Font(size = 15, weight = "bold")
+        boldFont = ft.Font(size = 12, weight = "bold")
         self = Button(masterFrame, text=btnText, width=17, height=2, font=boldFont, padx=0, pady=0)
         Operatingbtns[whatRun] = self
         self.place(relx=RelX, rely=RelY, anchor=N)

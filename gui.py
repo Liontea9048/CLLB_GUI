@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # ------------------------ Button for running the set up.
 
     ## input history files
-    Label(frame_SetAndRun, text = "Select Input File from History to Import", justify="center").place(relx=0.5, rely=0.80, anchor=N)
+    Label(frame_SetAndRun, text = "Select Input File \nfrom History to Import", justify="center").place(relx=0.5, rely=0.80, anchor=N)
     importFileList = ttk.Combobox(frame_SetAndRun, width = 20, height=20, state="readonly", justify="center")
     OperatingComboBoxes["import"] = importFileList
 
@@ -111,9 +111,9 @@ if __name__ == "__main__":
     ## Execute run*.exe
     btnExecRun = MButton(frame_SetAndRun, btnText="Execute Run.exe", RelY=updateBtnPosition(), whatRun="Run")
     ## this button equals to click three buttons above
-    btnSetAndRun = MButton(frame_SetAndRun, btnText="Set And Run All Things", RelY=updateBtnPosition(), whatRun="SetAndRun")
+    btnSetAndRun = MButton(frame_SetAndRun, btnText="Set And \nRun All Things", RelY=updateBtnPosition(), whatRun="SetAndRun")
     ## Open Output Folders
-    btnApplyHisotry = MButton(frame_SetAndRun, btnText="Apply Previous Input", RelY=updateBtnPosition(), whatRun="ApplyHistory")
+    btnApplyHisotry = MButton(frame_SetAndRun, btnText="Apply \nPrevious Input", RelY=updateBtnPosition(), whatRun="ApplyHistory")
     Operatingbtns["ApplyHistory"].place(relx=btnRelX, rely=0.70, anchor=N)
 
     root.mainloop()

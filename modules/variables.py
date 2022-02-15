@@ -21,7 +21,7 @@ args = parser.parse_args()
 print(args.setup)
 # ------------------------ Global Variables
 varInputXpos = 270;
-unitsXpos = 375;
+unitsXpos = 355;
 wrapLength = 250;
 btnFramePadX = 470;
 btnFramePadY = 10;
